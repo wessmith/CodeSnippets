@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>validate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (BOOL)validate&lt;#key#&gt;:(&lt;#Type#&gt; **)&lt;#value#&gt; error:(NSError *__autoreleasing *)outError
+{
+    BOOL isValid = YES;
+    NSError *combinedErrors = nil;
+    
+    if (&lt;#failing condition#&gt;) {
+        
+        isValid = NO;
+        if (outError != NULL) {
+            NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : NSLocalizedString(&lt;#Error Description#&gt;, nil) };
+            NSError *error = [NSError errorWithDomain:MUValidationErrorDomain code:&lt;#error code#&gt; userInfo:userInfo];
+            combinedErrors = [error mu_errorByCombiningWithError:combinedErrors];
+        }
+    }
+    
+    if (outError != NULL) {
+        *outError = combinedErrors;
+    }
+    
+    return isValid;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DD9D7959-F853-4336-B7B0-58C7862C8D8C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Core Date KVO Validation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
