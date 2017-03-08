@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dsi</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    BTWDataSourceItem *&lt;#item name#&gt; =
+    [[BTWDataSourceItem alloc] initWithCellIdentifier:[BTWButtonContextCell reuseIdentifier]
+                                          rawValueKey:&lt;#raw value key#&gt;
+                                      displayValueKey:NSStringFromSelector(@selector(&lt;#SEL#&gt;))];
+    localeItem.title = NSLocalizedString(@"&lt;#title#&gt;", nil);
+    localeItem.iconName = @"&lt;#icon name#&gt;";
+    localeItem.editorIdentifier = nil /*&lt;#editor identifier#&gt;*/;
+    [section addItem:&lt;#item name#&gt;];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>73062B78-5743-410A-B67A-5D0FD5217373</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Data Source Item</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
